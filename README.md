@@ -21,21 +21,23 @@ Online e-learning platform from Dunia Kato Senegal.
 
 ## Folder structure
 From: https://medium.com/@gagansh7171/dockerize-your-django-and-react-app-68a7b73ab6e9
-├──frontend
-| ├──public/
-| ├─src/
-| ├──Dockerfile          //Dockerfile for frontend image
-| ├──package.json
-| └──package-lock.json
-├──dks_ecole
-| ├──bug/
-| ├──media/
-| ├──dks_ecole/
-| ├──static/
-| ├──Dockerfile         //Dockerfile for backend image
-| ├──check_db.py
-| ├──entrypoint.sh
-| ├──manage.py
-| ├──requirements.txt
-| └──settings.ini
+```
+├──frontend  
+| ├──public/   
+| ├─src/  
+| ├──Dockerfile          //Dockerfile for frontend image  
+| ├──package.json  
+| └──package-lock.json  
+├──dks_ecole  
+| ├──bug/  
+| ├──media/  
+| ├──dks_ecole/  
+| ├──static/  
+| ├──Dockerfile         //Dockerfile for backend image  
+| ├──check_db.py  
+| ├──entrypoint.sh  
+| ├──manage.py  
+| ├──requirements.txt  
+| └──settings.ini  
 └──docker-compose.yaml  //for running multi-conatiner application
+```
