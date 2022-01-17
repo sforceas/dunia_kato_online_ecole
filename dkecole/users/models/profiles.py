@@ -24,8 +24,6 @@ class Profile(DKEcoleModel):
 	
 	biography = models.TextField(max_length=500, blank=True)
 
-	# Stats
-
 def __str__(self):
 	"""Return user's str representation."""
 	return str(self.user)

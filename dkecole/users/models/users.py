@@ -30,8 +30,8 @@ class User(DKEcoleModel, AbstractUser):
 	USERNAME_FIELD = 'email'
 	REQUIRED_FIELDS = ['username','first_name','last_name']
 
-	is_client = models.BooleanField(
-		'client status',
+	is_student = models.BooleanField(
+		'student status',
 		default=True,
 		help_text=(
 			'Help easily distinguish users and perform queries.'
@@ -51,6 +51,3 @@ def __str__(self):
 	"""Return username."""
 	return self.username
 
-def get_short_name(self):
-	"""Return username."""
-	return self.username

@@ -10,9 +10,9 @@ from dkecole.users.models import User, Profile
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
   """Profile model admin."""
-  list_display = ('user', 'reputation', 'rides_taken', 'rides_offered')
+  list_display = ('user',)
   search_fields = ('user__username', 'user__email', 'user__first_name', 'user__last_name')
-  list_filter = ('reputation',)
+  list_filter = ()
 
   fieldsets = (
     ('Profile', {
@@ -23,8 +23,6 @@ class ProfileAdmin(admin.ModelAdmin):
     }),
     ('Stats', {
       'fields': (
-        ('reputation'),
-        ('rides_taken', 'rides_offered'),
       )
     }),
     ('Metadata', {
@@ -42,7 +40,7 @@ class ProfileInLine(admin.StackedInline):
 class CustomUserAdmin(UserAdmin):
   """User model admin."""
   #inlines = (ProfileInLine,)
-  list_display = ('email', 'username', 'first_name', 'last_name', 'is_staff', 'is_client')
-  list_filter = ('is_client', 'is_staff', 'created', 'modified')
+  list_display = ('email', 'username', 'first_name', 'last_name', 'is_staff', 'is_student')
+  list_filter = ('is_student', 'is_staff', 'created', 'modified')
 
 admin.site.register(User, CustomUserAdmin)

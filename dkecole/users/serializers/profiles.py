@@ -4,7 +4,7 @@
 from rest_framework import serializers
 
 # Models
-from cride.users.models import Profile
+from dkecole.users.models import Profile
 
 class ProfileModelSerializer(serializers.ModelSerializer):
     """Profile model serializer"""
@@ -15,14 +15,10 @@ class ProfileModelSerializer(serializers.ModelSerializer):
         fields = (
             'picture',
             'biography',
-            'rides_taken',
-            'rides_offered',
-            'reputation'
+
         )
         read_only_fields = (
-            'rides_taken',
-            'rides_offered',
-            'reputation'
+
         )
 
 

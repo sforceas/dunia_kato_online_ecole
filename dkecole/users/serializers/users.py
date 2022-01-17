@@ -21,7 +21,7 @@ from dkecole.users.models import User, Profile
 from dkecole.taskapp.tasks import send_confirmation_email
 
 # Serializers
-from dkecole.users.serializers import ProfileModelSerializer
+from dkecole.users.serializers.profiles import ProfileModelSerializer
 
 #Utilities
 from datetime import timedelta

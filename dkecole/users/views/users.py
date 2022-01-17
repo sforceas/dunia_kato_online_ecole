@@ -9,15 +9,13 @@ from rest_framework.decorators import action
 
 # Permissions
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from cride.users.permissions.users import IsAccountOwner
+from dkecole.users.permissions.users import IsAccountOwner
 
 # Serializers
-from cride.users.serializers import UserLoginSerializer, UserModelSerializer, UserSignUpSerializer, AccountVerificationSerializer, ProfileModelSerializer
-from cride.circles.serializers import CircleModelSerializer
+from dkecole.users.serializers import UserLoginSerializer, UserModelSerializer, UserSignUpSerializer, AccountVerificationSerializer, ProfileModelSerializer
 
 # Models
-from cride.users.models import User
-from cride.circles.models import Circle
+from dkecole.users.models import User
 
 class UserViewSet(mixins.RetrieveModelMixin,
                   mixins.UpdateModelMixin,
@@ -25,7 +23,7 @@ class UserViewSet(mixins.RetrieveModelMixin,
     """User view set.
     Handle sign up, login and account verification.
     """
-    queryset = User.objects.filter(is_active=True,is_client=True)
+    queryset = User.objects.filter(is_active=True,is_student=True)
     serializer_class = UserModelSerializer
     lookup_field = 'username'
 
