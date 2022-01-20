@@ -7,6 +7,10 @@ psycopg2==2.9.3 --no-binary psycopg2
 # Django
 django==4.0.1
 
+# Utilities
+django-countries==7.2.1
+
+
 # Environment
 django-environ==0.8.1
 

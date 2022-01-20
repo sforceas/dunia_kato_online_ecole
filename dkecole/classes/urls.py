@@ -1,4 +1,4 @@
-"""Users URLs"""
+"""Courses URLs"""
 # Django
 from django.urls import include, path
 
@@ -6,9 +6,9 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 # Views
-from dkecole.users import views as users_views
+from dkecole.courses import views as courses_views
 
 router=DefaultRouter()
-router.register(r'users',users_views.UserViewSet,basename='users')
+router.register(r'classes',courses_views.CourseViewSet,basename='classes')
 urlpatterns = [path('',include(router.urls))]
 

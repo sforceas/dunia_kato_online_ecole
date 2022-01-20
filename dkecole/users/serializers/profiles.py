@@ -14,8 +14,22 @@ class ProfileModelSerializer(serializers.ModelSerializer):
         model = Profile
         fields = (
             'picture',
+            'web_page',
             'biography',
-
+            'gender',
+            #'country',
+            'birth_date',
+            'educational_level',
+            'is_working',
+            'is_workin_role',
+            'is_searching_work',
+            'interest_bussiness',
+            'interest_marketing',
+            'interest_fabrication',
+            'interest_programming',
+            'interest_idiomes',
+            'is_public_profile',
+            'is_public_name'
         )
         read_only_fields = (
 
